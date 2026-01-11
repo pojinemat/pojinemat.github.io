@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Smart Vehicular Forensics</title>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Add this in your <head> to import the font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen">
+<body class="bg-gray-950 text-gray-100 min-h-screen flex flex-col">
+
+<!-- Blurred background -->
+<div class="fixed inset-0 -z-10">
+  <div
+    class="absolute inset-0 bg-cover bg-center blur scale-110"
+    style="background-image: url('https://wallpapers.com/images/featured/coding-background-9izlympnd0ovmpli.jpg');">
+  </div>
+  <!-- Dark overlay -->
+  <div class="absolute inset-0 bg-black/70"></div>
+</div>
+<!-- Navbar with top logo and centered icons -->
+<!-- Navbar -->
+<nav class="bg-black text-white w-full font-poppins shadow-lg">
+  <!-- Logo on top -->
+  <div class="flex justify-center py-4 border-b border-gray-800">
+    <img src="assets/logo.png" alt="Amir Fauzi Logo" class="h-[105px]">
+  </div>
+
+  <!-- Nav icons -->
+  <div class="flex justify-center gap-12 py-4">
+    <!-- Home -->
+    <a href="index.html" class="flex flex-col items-center text-white hover:text-indigo-400 transition transform hover:scale-110">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-5H9v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9z"/>
+      </svg>
+      <span class="text-sm">HOME</span>
+    </a>
+
+    <!-- Projects -->
+    <a href="projects.html" class="flex flex-col items-center text-white hover:text-indigo-400 transition transform hover:scale-110 active-page">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M19.14 12.936a7.07 7.07 0 000-1.872l2.037-1.584a.5.5 0 00.12-.64l-1.928-3.34a.5.5 0 00-.607-.215l-2.4.96a6.968 6.968 0 00-1.62-.936l-.36-2.52A.5.5 0 0014.8 2h-3.6a.5.5 0 00-.492.426l-.36 2.52c-.597.222-1.15.53-1.62.936l-2.4-.96a.5.5 0 00-.607.215l-1.928 3.34a.5.5 0 00.12.64l2.037 1.584a7.07 7.07 0 000 1.872l-2.037 1.584a.5.5 0 00-.12.64l1.928 3.34a.5.5 0 00.607.215l2.4-.96c.47.406 1.023.714 1.62.936l.36 2.52a.5.5 0 00.492.426h3.6a.5.5 0 00.492-.426l.36-2.52c.597-.222 1.15-.53 1.62-.936l2.4.96a.5.5 0 00.607-.215l1.928-3.34a.5.5 0 00-.12-.64l-2.037-1.584zM12 15.5a3.5 3.5 0 110-7 3.5 3.5 0 010 7z"/>
+      </svg>
+      <span class="text-sm">PROJECTS</span>
+    </a>
+
+    <!-- Movies -->
+     <!-- Movies (Classic 90s Ticket Shape) -->
+<a href="movies.html" class="flex flex-col items-center text-white hover:text-indigo-400 transition transform hover:scale-110">
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mb-1" viewBox="0 0 24 24" fill="currentColor">
+    <!-- Rectangle with rounded corners -->
+    <rect x="2" y="5" width="20" height="14" rx="2" ry="2"/>
+    <!-- Left perforation -->
+    <circle cx="2" cy="12" r="1.8" fill="black"/>
+    <!-- Right perforation -->
+    <circle cx="22" cy="12" r="1.8" fill="black"/>
+  </svg>
+  <span class="text-sm">MOVIES</span>
+</a>
+
+    <!-- Resume -->
+    <a href="resume.html" class="flex flex-col items-center text-white hover:text-indigo-400 transition transform hover:scale-110">
+      <!-- Paper/document icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M6 2h9l5 5v15a1 1 0 01-1 1H6a1 1 0 01-1-1V3a1 1 0 011-1zm9 5V3.5L18.5 7H15z"/>
+      </svg>
+      <span class="text-sm">Resume</span>
+    </a>
+
+    <!-- Contact -->
+    <a href="contact.html" class="flex flex-col items-center text-white hover:text-indigo-400 transition transform hover:scale-110">
+      <!-- Envelope/mail icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/>
+      </svg>
+      <span class="text-sm">Contact</span>
+    </a>
+  </div>
+</nav>
+<style>
+.tab-btn {
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  background: transparent;
+  color: #d1d5db;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.tab-btn:hover {
+  background: rgba(99, 102, 241, 0.15);
+  color: #c7d2fe;
+}
+
+.active-tab {
+  background: linear-gradient(135deg, #6366f1, #818cf8);
+  color: white;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.35);
+}
+.list-card { background:#222f41; padding:2rem; border-radius:1rem; text-align:center; cursor:pointer; }
+.list-card:hover { background:#374151; }
+.nav-icon {
+  font-size: 1.3rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+  color: #d1d5db;
+}
+
+.nav-icon:hover {
+  transform: scale(1.25);
+  color: #818cf8;
+}
+
+.nav-icon.active {
+  color: #6366f1;
+}
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  text-align: center;
+  color: #d1d5db;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.nav-item:hover {
+  transform: scale(1.15);
+  color: #818cf8;
+}
+
+.nav-item.active {
+  color: #6366f1;
+}
+
+.nav-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.nav-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.footer-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease, fill 0.2s ease;
+  fill: #1e3a8a; /* dark blue */
+}
+
+.footer-icon:hover {
+  transform: scale(1.3);
+  fill: #3b82f6; /* brighter blue */
+}
+/* Other pages are slightly dimmed */
+.nav-item {
+  opacity: 0.7; /* slightly darker for non-active pages */
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Current page is fully bright */
+.active-page {
+  opacity: 1;
+  color: #818cf8; /* optional, or keep white */
+}
+</style>
+
+<header class="py-24 bg-gray-900">
+<div class="max-w-4xl mx-auto px-8">
+<h1 class="text-4xl font-bold mb-4">Vehicular Cyber Forensics</h1>
+<p class="text-gray-300">Analysis of CAN-based cyber attacks in modern vehicles.</p>
+</div>
+</header>
+
+
+<main class="max-w-4xl mx-auto p-8 space-y-12">
+<section>
+<h2 class="text-2xl font-semibold mb-3">Research Context</h2>
+<p class="text-gray-300">
+Modern vehicles rely heavily on internal networks such as CAN buses.
+This project investigates how cyber attacks manifest differently in
+traditional versus modern vehicle architectures.
+</p>
+</section>
+
+
+<section>
+<h2 class="text-2xl font-semibold mb-3">Focus Areas</h2>
+<ul class="list-disc list-inside text-gray-400 space-y-2">
+<li>DoS and fuzzing attacks on CAN networks</li>
+<li>Impact of network complexity on forensic traceability</li>
+<li>Challenges in evidence acquisition</li>
+</ul>
+</section>
+
+
+<section>
+<h2 class="text-2xl font-semibold mb-3">Methods & Tools</h2>
+<p class="text-gray-400">CAN datasets · Traffic analysis · Research methodology</p>
+</section>
+</main>
+<footer class="text-center py-6 flex flex-col items-center gap-3 bg-gray-950">
+  <div class="flex gap-4">
+    <!-- Instagram -->
+       <a href="https://www.instagram.com/tempoyakpatin_/" target="_blank" aria-label="Instagram" class="footer-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5">
+        <path fill="#1e3a8a" d="M349.33 69.33H162.67C108.2 69.33 69.33 108.2 69.33 162.67v186.67c0 54.47 38.87 93.34 93.34 93.34h186.67c54.47 0 93.33-38.87 93.33-93.34V162.67c0-54.47-38.86-93.34-93.34-93.34zm61.34 280c0 33.99-27.35 61.34-61.34 61.34H162.67c-33.99 0-61.34-27.35-61.34-61.34V162.67c0-33.99 27.35-61.34 61.34-61.34h186.67c33.99 0 61.34 27.35 61.34 61.34v186.66z"/>
+        <circle fill="#1e3a8a" cx="256" cy="256" r="80"/>
+        <circle fill="#1e3a8a" cx="360" cy="152" r="20"/>
+      </svg>
+    </a>
+
+    <!-- X (Twitter) -->
+    <a href="https://x.com/pojinemat" target="_blank" aria-label="X / Twitter" class="footer-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5">
+        <path fill="#1e3a8a" d="M459.4 151.7c.3 4.1.3 8.2.3 12.3 0 125.3-95.4 269.6-269.6 269.6-53.5 0-103.2-15.6-145-42.4 7.5.9 15.2 1.4 23 1.4 44.2 0 84.9-15.1 117-40.4-41.3-.7-76.1-28-88.2-65.3 5.7.9 11.5 1.4 17.5 1.4 8.4 0 16.5-1.1 24.3-3.2-43.2-8.7-75.7-46.8-75.7-92.5v-1.2c12.7 7 27.2 11.2 42.6 11.7-25.2-16.9-41.7-45.7-41.7-78.2 0-17.2 4.6-33.3 12.7-47.2 45.9 56.3 114.7 93.3 192.1 97.3-1.6-6.9-2.5-14.1-2.5-21.5 0-52.3 42.5-94.8 94.8-94.8 27.3 0 51.9 11.5 69.2 29.9 21.5-4.2 41.6-12.1 59.7-23-7 21.9-21.9 40.3-41.2 51.9 19-2.3 37.2-7.3 54-14.9-12.7 18.8-28.7 35.2-47.1 48.4z"/>
+      </svg>
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/amir-fauzi-bin-ne-mat-a1ba32369/" target="_blank" aria-label="LinkedIn" class="footer-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-5 h-5">
+        <path fill="#1e3a8a" d="M100.28 448H7.4V148.9h92.88zm-46.44-340a53.57 53.57 0 1 1 53.57-53.57 53.56 53.56 0 0 1-53.57 53.57zm394.34 340h-92.68V302.4c0-34.7-12.4-58.3-43.33-58.3-23.64 0-37.63 15.9-43.8 31.3-2.26 5.5-2.83 13.2-2.83 20.9V448h-92.68s1.23-241.4 0-266.1h92.68v37.7c12.3-19 34.3-46.2 83.3-46.2 60.8 0 106.4 39.7 106.4 125.1V448z"/>
+      </svg>
+    </a>
+
+    <!-- Letterboxd -->
+      <a href="https://letterboxd.com/tempoyakpatin/" target="_blank" aria-label="Letterboxd" class="footer-icon">
+  <!-- Three circles overlapping ~10% -->
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-5 h-5">
+    <circle cx="15" cy="32" r="10" fill="#1e3a8a" fill-opacity="0.8"/>
+    <circle cx="32" cy="32" r="10" fill="#1e3a8a" fill-opacity="0.8"/>
+    <circle cx="49" cy="32" r="10" fill="#1e3a8a" fill-opacity="0.8"/>
+  </svg>
+</a>
+  </div>
+  <p class="text-gray-400 text-xs mt-2">© 2026 Amir Fauzi</p>
+</footer>
+</body>
+</html>
