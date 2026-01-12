@@ -699,15 +699,26 @@ function renderReviews() {
     const card = document.createElement('div');
     card.className = 'bg-gray-800 p-5 rounded-xl flex gap-4 relative cursor-pointer hover:bg-gray-700 transition';
     card.innerHTML = `
-      <div class="relative">
-        <img src="${m.poster}" alt="${m.title}" class="w-24 h-36 object-cover rounded" />
-        ${m.rewatch ? '<span class="absolute top-2 left-2 bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded">Rewatch</span>' : ''}
-      </div>
-      <div>
-        <h3 class="font-semibold text-lg">${m.title} (${m.year})</h3>
-        <div class="flex items-center gap-0.5 rating-stars">${renderStars(m.rating)}</div>
-        <p class="text-gray-400 text-sm">Watched: ${m.watchedDate}</p>
-      </div>
+      <div class="relative flex-shrink-0">
+  <img src="${m.poster}"
+       alt="${m.title}"
+       class="w-24 h-36 object-cover rounded" />
+</div>
+
+<div class="flex-1 min-w-0">
+  <h3 class="font-semibold text-lg leading-snug line-clamp-2">
+    ${m.title} (${m.year})
+  </h3>
+
+  <div class="flex items-center gap-0.5 rating-stars">
+    ${renderStars(m.rating)}
+  </div>
+
+  <p class="text-gray-400 text-sm">
+    Watched: ${m.watchedDate}
+  </p>
+</div>
+
     `;
     // Add click to open review modal
     card.addEventListener('click', () => {
@@ -866,4 +877,5 @@ renderReviews();
 
 </body>
 </html>
+
 
