@@ -3,29 +3,40 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Home</title>
+<title>Movies</title>
 <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- Google Font -->
+<!-- Add this in your <head> to import the font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-950 text-gray-100 min-h-screen flex flex-col font-poppins">
+<body class="bg-gray-950 text-gray-100 min-h-screen">
+<body class="bg-gray-950 text-gray-100 min-h-screen flex flex-col">
 
-<!-- NAVBAR -->
-<nav class="bg-black text-white w-full shadow-lg">
+<!-- Blurred background -->
+<div class="fixed inset-0 -z-10">
+  <div
+    class="absolute inset-0 bg-cover bg-center blur scale-110"
+    style="background-image: url('https://thefilmist.wordpress.com/wp-content/uploads/2009/12/shot0118.png');">
+  </div>
+  <!-- Dark overlay -->
+  <div class="absolute inset-0 bg-black/70"></div>
+</div>
+<!-- Navbar with top logo and centered icons -->
+<!-- Navbar -->
+<nav class="bg-black text-white w-full font-poppins shadow-lg">
   <!-- Logo on top -->
   <div class="flex justify-center py-4 border-b border-gray-800">
-    <img src="assets/logo.png" alt="Amir Fauzi Logo" class="h-[105px]">
+    <img src="assets/logo.png" alt="Amir Fauzi Logo" class="h-16 sm:h-20 md:h-[105px]">
   </div>
 
   <!-- Nav icons -->
-  <div class="flex justify-center gap-12 py-4">
+   <div class="flex flex-wrap justify-center gap-6 sm:gap-10 md:gap-12 py-4">
     <!-- Home -->
-    <a href="index.html" class="flex flex-col items-center text-white hover:text-indigo-400 transition transform hover:scale-110 active-page">
+    <a href="index.html" class="flex flex-col items-center text-white hover:text-indigo-400 transition transform hover:scale-110">
       <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 24 24">
         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-5H9v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9z"/>
       </svg>
-      <span class="text-sm">HOME</span>
+      <span class="text-xs sm:text-sm">HOME</span>
     </a>
 
     <!-- Projects -->
@@ -33,38 +44,114 @@
       <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 24 24">
         <path d="M19.14 12.936a7.07 7.07 0 000-1.872l2.037-1.584a.5.5 0 00.12-.64l-1.928-3.34a.5.5 0 00-.607-.215l-2.4.96a6.968 6.968 0 00-1.62-.936l-.36-2.52A.5.5 0 0014.8 2h-3.6a.5.5 0 00-.492.426l-.36 2.52c-.597.222-1.15.53-1.62.936l-2.4-.96a.5.5 0 00-.607.215l-1.928 3.34a.5.5 0 00.12.64l2.037 1.584a7.07 7.07 0 000 1.872l-2.037 1.584a.5.5 0 00-.12.64l1.928 3.34a.5.5 0 00.607.215l2.4-.96c.47.406 1.023.714 1.62.936l.36 2.52a.5.5 0 00.492.426h3.6a.5.5 0 00.492-.426l.36-2.52c.597-.222 1.15-.53 1.62-.936l2.4.96a.5.5 0 00.607-.215l1.928-3.34a.5.5 0 00-.12-.64l-2.037-1.584zM12 15.5a3.5 3.5 0 110-7 3.5 3.5 0 010 7z"/>
       </svg>
-      <span class="text-sm">PROJECTS</span>
+      <span class="text-xs sm:text-sm">PROJECTS</span>
     </a>
 
     <!-- Movies -->
-    <a href="movies.html" class="flex flex-col items-center text-white hover:text-indigo-400 transition transform hover:scale-110">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mb-1" viewBox="0 0 24 24" fill="currentColor">
-        <rect x="2" y="5" width="20" height="14" rx="2" ry="2"/>
-        <circle cx="2" cy="12" r="1.8" fill="black"/>
-        <circle cx="22" cy="12" r="1.8" fill="black"/>
-      </svg>
-      <span class="text-sm">MOVIES</span>
-    </a>
+     <!-- Movies (Classic 90s Ticket Shape) -->
+<a href="movies.html" class="flex flex-col items-center text-white hover:text-indigo-400 transition transform hover:scale-110 active-page">
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mb-1" viewBox="0 0 24 24" fill="currentColor">
+    <!-- Rectangle with rounded corners -->
+    <rect x="2" y="5" width="20" height="14" rx="2" ry="2"/>
+    <!-- Left perforation -->
+    <circle cx="2" cy="12" r="1.8" fill="black"/>
+    <!-- Right perforation -->
+    <circle cx="22" cy="12" r="1.8" fill="black"/>
+  </svg>
+  <span class="text-xs sm:text-sm">MOVIES</span>
+</a>
 
     <!-- Resume -->
     <a href="resume.html" class="flex flex-col items-center text-white hover:text-indigo-400 transition transform hover:scale-110">
+      <!-- Paper/document icon -->
       <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 24 24">
         <path d="M6 2h9l5 5v15a1 1 0 01-1 1H6a1 1 0 01-1-1V3a1 1 0 011-1zm9 5V3.5L18.5 7H15z"/>
       </svg>
-      <span class="text-sm">RESUME</span>
+      <span class="text-xs sm:text-sm">Resume</span>
     </a>
 
     <!-- Contact -->
     <a href="contact.html" class="flex flex-col items-center text-white hover:text-indigo-400 transition transform hover:scale-110">
+      <!-- Envelope/mail icon -->
       <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 24 24">
         <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/>
       </svg>
-      <span class="text-sm">CONTACT</span>
+      <span class="text-xs sm:text-sm">Contact</span>
     </a>
   </div>
 </nav>
 
+
+
+
+
+<main class="max-w-6xl mx-auto p-8">
+  <h1 class="text-4xl font-bold mb-2">Film Journal</h1>
+  <p class="text-gray-400 mb-8">A long-term record of everything I watch, revisit, and anticipate.</p>
+
+  <!-- Tabs -->
+ <div class="flex gap-3 mb-10 bg-gray-900/60 p-2 rounded-full w-fit backdrop-blur">
+  <button onclick="switchTab('reviews', this)" class="tab-btn active-tab">
+    Reviews
+  </button>
+  <button onclick="switchTab('lists', this)" class="tab-btn">
+    Lists
+  </button>
+  <button onclick="switchTab('predictions', this)" class="tab-btn">
+    Predictions
+  </button>
+</div>
+
+
+  <!-- Reviews -->
+  <section id="reviews" class="tab-section">
+    <div id="reviewsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+    <div class="mt-8 flex items-center gap-4">
+      <button onclick="prevPage()" class="bg-gray-800 px-3 py-1 rounded hover:bg-gray-700 transition">Prev</button>
+      <span class="text-gray-400">Page:</span>
+      <input id="pageInput" type="number" min="1" max="36" class="w-20 bg-gray-800 border border-gray-700 rounded px-3 py-1" />
+      <button onclick="jumpToPage()" class="bg-indigo-600 px-4 py-1 rounded hover:bg-indigo-500 transition">Go</button>
+      <button onclick="nextPage()" class="bg-gray-800 px-3 py-1 rounded hover:bg-gray-700 transition">Next</button>
+      <span id="pageInfo" class="text-gray-400"></span>
+    </div>
+  </section>
+
+  <!-- Lists -->
+  <section id="lists" class="tab-section hidden">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div onclick="openModal('favorites')" class="list-card">All-Time Favorites</div>
+      <div onclick="openModal('rewatches')" class="list-card">Most Rewatched</div>
+      <div onclick="openModal('fiveStars')" class="list-card">★★★★★ Club</div>
+    </div>
+  </section>
+
+  <!-- Predictions -->
+  <section id="predictions" class="tab-section hidden">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div onclick="openModal('anticipated')" class="list-card">Most Anticipated</div>
+      <div onclick="openModal('directors')" class="list-card">Director Watchlist</div>
+      <div onclick="openModal('wildcards')" class="list-card">Wildcards</div>
+    </div>
+  </section>
+</main>
+
+<!-- Modal -->
+<div id="modal" class="fixed inset-0 bg-black/70 hidden flex items-center justify-center">
+  <div class="bg-gray-900 w-full max-w-lg rounded-xl p-6">
+    <h2 id="modalTitle" class="text-2xl font-semibold mb-4"></h2>
+    <div id="modalContent" class="max-h-96 overflow-y-auto text-gray-300"></div>
+    <button onclick="closeModal()" class="mt-6 text-indigo-400 hover:underline">Close</button>
+  </div>
+</div>
+
 <style>
+
+  .star {
+  width: 18px;
+  height: 18px;
+  color: #facc15; /* Tailwind yellow-400 */
+}
+
 .tab-btn {
   padding: 0.5rem 1.25rem;
   border-radius: 9999px;
@@ -141,6 +228,7 @@
   transform: scale(1.3);
   fill: #3b82f6; /* brighter blue */
 }
+
 /* Other pages are slightly dimmed */
 .nav-item {
   opacity: 0.7; /* slightly darker for non-active pages */
@@ -159,57 +247,509 @@
 }
 
 
-
 </style>
 
-<!-- HERO SECTION -->
-<section class="min-h-screen flex items-center">
-<div class="max-w-6xl mx-auto p-10 grid md:grid-cols-2 gap-10 items-center">
-<div class="slide-up">
-<h1 class="text-5xl font-bold mb-6 leading-tight">
-Hi, I'm Amir.<br />
-<span class="text-gray-400 text-3xl">Student · Researcher · Technologist</span>
-</h1>
-<p class="text-gray-300 leading-relaxed mb-6">
-I’m a student at IIUM with interests in systems design, cybersecurity,
-research-driven technology, and film analysis. This website serves as a
-personal portfolio and archive of my work, projects, and ideas.
-</p>
-<a href="projects.html" class="inline-block bg-gray-800 px-6 py-3 rounded-xl hover:bg-gray-700 transition">
-View My Work
-</a>
-</div>
+<script>
+// ===== Movies Data =====
+const movies = [
+  { title: "Monster", year: 2023, rating: 4.5, rewatch: false, watchedDate: "27/12/2025", poster: "https://upload.wikimedia.org/wikipedia/en/a/a3/Monster_2023_film_poster.png", review: "A raging tale of emotional suppression and the consequences that comes with it. The score by Ryuichi Sakamoto is tender and sad it makes your eyes tear. Excellent writing further elevated by brilliant performances from all of the main casts. Sakura Ando with a standout performance as usual coupled with amazing performances from the two young actors (Soya Kurokawa and Hinata Hiiragi). I won't lie that I had some strong disagreement with some of the elements in the material (hence, the -0.5 star). However, the way Kore-eda handled the story was nothing short of perfection. Every frame was sharply compositioned and meticulously staged. The editing was razor sharp, the two hour mark arrives way faster than you'd expect. It pains me that some of us has to suppress secrets so deep within ourselves that it would later give birth to a chain-reaction so destructive, it was perceives as an extreme danger. I have a strong stance against some things but the injustice and fear inflicted to some is simply baffling. Again I say, it's a cruel world we live in and I firmly believe we can make it better if we change our ways." },
+  { title: "Prisoners", year: 2013, rating: 5, rewatch: true, watchedDate: "26/12/2025", poster: "https://upload.wikimedia.org/wikipedia/en/6/63/Prisoners2013Poster.jpg" },
+  { title: "Wake Up Dead Man", year: 2025, rating: 4, rewatch: false, watchedDate: "20/12/2025", poster: "https://upload.wikimedia.org/wikipedia/en/d/d9/WakeUpDeadMan_poster.jpg" },
+  { title: "Sentimental Value", year: 2025, rating: 5, rewatch: false, watchedDate: "6/12/2025", poster: "https://upload.wikimedia.org/wikipedia/en/5/5c/Sentimental_Value_2025.jpeg" },
+  { title: "Frankenstein", year: 2025, rating: 4, rewatch: false, watchedDate: "5/12/2025", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjPsIU7DO7cxijlqdEKec1mX5Wum50eXhgwA&s" },
+  { title: "Bugonia", year: 2025, rating: 4.5, rewatch: false, watchedDate: "5/12/2025", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFwOWw9ZTGIqWlX400QtvpXYXZZSY2hLBPGw&s" },
+  { title: "Ransom", year: 1996, rating: 4, rewatch: false, watchedDate: "29/11/2025", poster: "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p18675_p_v10_aa.jpg" },
+  { title: "Sisu: Road to Revenge", year: 2025, rating: 1, rewatch: false, watchedDate: "29/11/2025", poster: "https://media-cache.cinematerial.com/p/500x/cuwnpktu/sisu-2-british-movie-poster.jpg?v=1756306601" },
+  { title: "There Will Be Blood", year: 2007, rating: 5, rewatch: true, watchedDate: "27/11/2025", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGAPsmfekVX2h2Am2DXyI1OwDyG0Yiwn_rXw&s" },
+  { title: "The Interpreter", year: 2005, rating: 1.5, rewatch: false, watchedDate: "27/11/2025", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCt83k9RJyc8ei2uuaMPsZViSx_pxtSU_99Q&s" },
+  { title: "Prisoners", year: 2013, rating: 5, rewatch: true, watchedDate: "25/11/2025", poster: "https://upload.wikimedia.org/wikipedia/en/6/63/Prisoners2013Poster.jpg" },
+  { title: "Mission: Impossible – Rogue Nation", year: 2015, rating: 4, rewatch: true, watchedDate: "24/11/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "EXIT", year: 2019, rating: 2, rewatch: false, watchedDate: "23/11/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Monster", year: 2004, rating: 5, rewatch: false, watchedDate: "17/11/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Amadeus", year: 1984, rating: 5, rewatch: false, watchedDate: "14/11/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Fantastic 4: First Steps", year: 2025, rating: 3.5, rewatch: false, watchedDate: "6/11/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "F1", year: 2025, rating: 4, rewatch: false, watchedDate: "1/11/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Anemone", year: 2025, rating: 2.5, rewatch: false, watchedDate: "25/10/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Sorry, Baby", year: 2025, rating: 4.5, rewatch: false, watchedDate: "25/10/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Iron Claw", year: 2023, rating: 4, rewatch: false, watchedDate: "24/10/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Weapons", year: 2025, rating: 4, rewatch: false, watchedDate: "24/10/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Long Walk", year: 2025, rating: 3, rewatch: false, watchedDate: "24/10/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Cure", year: 1997, rating: 5, rewatch: false, watchedDate: "23/10/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Magnolia", year: 1999, rating: 5, rewatch: true, watchedDate: "20/10/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Heat", year: 1995, rating: 4.5, rewatch: false, watchedDate: "18/10/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Ne Zha 2", year: 2025, rating: 3.5, rewatch: false, watchedDate: "18/10/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "No Other Choice", year: 2025, rating: 5, rewatch: false, watchedDate: "17/10/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "One Battle After Another", year: 2025, rating: 5, rewatch: false, watchedDate: "16/10/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Decision to Leave", year: 2022, rating: 5, rewatch: true, watchedDate: "14/10/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "A Separation", year: 2011, rating: 5, rewatch: false, watchedDate: "9/10/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Phantom Thread", year: 2017, rating: 5, rewatch: false, watchedDate: "8/10/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Departed", year: 2006, rating: 5, rewatch: true, watchedDate: "5/10/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Lord of the Rings: The Fellowship of the Ring", year: 2001, rating: 5, rewatch: true, watchedDate: "4/10/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Conjuring: The Devil Made Me Do It", year: 2021, rating: 2, rewatch: false, watchedDate: "3/10/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Interstellar", year: 2014, rating: 5, rewatch: true, watchedDate: "1/10/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "A Bronx Tale", year: 1993, rating: 3.5, rewatch: false, watchedDate: "1/10/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Kung Fu Panda 4", year: 2024, rating: 1.5, rewatch: false, watchedDate: "27/9/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Spotlight", year: 2015, rating: 5, rewatch: true, watchedDate: "25/9/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Monsters University", year: 2013, rating: 4, rewatch: true, watchedDate: "25/9/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Taking of Deborah Logan", year: 2014, rating: 2.5, rewatch: false, watchedDate: "24/9/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Fantastic Mr. Fox", year: 2009, rating: 5, rewatch: true, watchedDate: "23/9/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Elemental", year: 2023, rating: 3, rewatch: false, watchedDate: "23/9/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Superman", year: 2025, rating: 3.5, rewatch: true, watchedDate: "23/9/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Social Network", year: 2010, rating: 5, rewatch: true, watchedDate: "22/9/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Tomb Raider", year: 2018, rating: 2, rewatch: false, watchedDate: "20/9/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Godfather Part II", year: 1974, rating: 5, rewatch: true, watchedDate: "20/9/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Puss in Boots: The Last Wish", year: 2022, rating: 4, rewatch: false, watchedDate: "20/9/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Time Still Turns the Pages", year: 2023, rating: 4, rewatch: false, watchedDate: "18/9/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "No Time to Die", year: 2021, rating: 3.5, rewatch: true, watchedDate: "18/9/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "1942: A Love Story", year: 1994, rating: 3, rewatch: false, watchedDate: "14/9/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Vanilla Sky", year: 2001, rating: 4, rewatch: true, watchedDate: "13/9/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Hunger Games", year: 2012, rating: 3.5, rewatch: true, watchedDate: "12/9/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Shutter Island", year: 2010, rating: 5, rewatch: true, watchedDate: "11/9/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Rango", year: 2011, rating: 4, rewatch: true, watchedDate: "10/9/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Allied", year: 2016, rating: 4, rewatch: false, watchedDate: "9/9/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Decision to Leave", year: 2022, rating: 5, rewatch: true, watchedDate: "2/9/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Superman", year: 2025, rating: 3.5, rewatch: false, watchedDate: "29/8/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Mission: Impossible – Rogue Nation", year: 2015, rating: 4, rewatch: true, watchedDate: "29/8/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Tabula Rasa", year: 2014, rating: 4.5, rewatch: true, watchedDate: "28/8/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Mission: Impossible III", year: 2006, rating: 4, rewatch: true, watchedDate: "23/8/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Fantastic Beasts and Where to Find Them", year: 2016, rating: 3, rewatch: true, watchedDate: "23/8/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Presumed Innocent", year: 1990, rating: 4, rewatch: false, watchedDate: "22/8/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Dune: Part Two", year: 2024, rating: 5, rewatch: true, watchedDate: "20/8/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Dune", year: 2021, rating: 4.5, rewatch: true, watchedDate: "19/8/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Adventures of Tintin", year: 2011, rating: 4, rewatch: true, watchedDate: "18/8/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Terminator Genisys", year: 2015, rating: 1.5, rewatch: false, watchedDate: "16/8/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Bloodhounds", year: 2023, rating: 4, rewatch: false, watchedDate: "14/8/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Spotlight", year: 2015, rating: 5, rewatch: false, watchedDate: "14/8/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Blood Brothers: Bara Naga", year: 2025, rating: 2.5, rewatch: false, watchedDate: "13/8/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Inception", year: 2010, rating: 5, rewatch: true, watchedDate: "12/8/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Spider-Man: Into the Spider-Verse", year: 2018, rating: 4, rewatch: true, watchedDate: "10/8/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Brick", year: 2025, rating: 1, rewatch: false, watchedDate: "9/8/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Deadpool & Wolverine", year: 2024, rating: 1.5, rewatch: false, watchedDate: "8/8/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Shoplifters", year: 2018, rating: 5, rewatch: false, watchedDate: "8/8/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Munich", year: 2005, rating: 2, rewatch: false, watchedDate: "8/8/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Dearest", year: 2014, rating: 4, rewatch: false, watchedDate: "8/8/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Paddington", year: 2014, rating: 4, rewatch: true, watchedDate: "5/8/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Batman", year: 2022, rating: 4.5, rewatch: true, watchedDate: "5/8/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Exorcist", year: 1973, rating: 4, rewatch: false, watchedDate: "4/8/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Zodiac", year: 2007, rating: 5, rewatch: true, watchedDate: "3/8/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Late Night with the Devil", year: 2023, rating: 3, rewatch: false, watchedDate: "2/8/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Hope", year: 2013, rating: 5, rewatch: false, watchedDate: "31/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Nightmare Before Christmas", year: 1993, rating: 4, rewatch: false, watchedDate: "30/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Y Tu Mamá También", year: 2001, rating: 4.5, rewatch: false, watchedDate: "29/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Kahar: Kapla High Council", year: 2024, rating: 2, rewatch: false, watchedDate: "28/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Dune", year: 1984, rating: 3, rewatch: false, watchedDate: "28/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Spider-Man 3", year: 2007, rating: 3, rewatch: true, watchedDate: "28/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Batman", year: 2022, rating: 4.5, rewatch: true, watchedDate: "27/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Drive", year: 2023, rating: 2, rewatch: false, watchedDate: "26/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Shrek the Third", year: 2007, rating: 2.5, rewatch: true, watchedDate: "26/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Like Father, Like Son", year: 2013, rating: 5, rewatch: false, watchedDate: "26/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "A Family", year: 2020, rating: 3.5, rewatch: false, watchedDate: "26/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "100 Yen Love", year: 2014, rating: 3.5, rewatch: false, watchedDate: "25/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Se7en", year: 1995, rating: 5, rewatch: true, watchedDate: "24/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Magnificent Seven", year: 2016, rating: 3.5, rewatch: true, watchedDate: "24/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Wolf of Wall Street", year: 2013, rating: 3.5, rewatch: true, watchedDate: "23/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Anora", year: 2024, rating: 3.5, rewatch: false, watchedDate: "21/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "A Minecraft Movie", year: 2025, rating: 0.5, rewatch: false, watchedDate: "21/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Barbie", year: 2023, rating: 4, rewatch: false, watchedDate: "21/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Mogul Mowgli", year: 2020, rating: 4, rewatch: false, watchedDate: "20/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Pulp Fiction", year: 1994, rating: 5, rewatch: true, watchedDate: "19/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Spider-Man: Homecoming", year: 2017, rating: 3.5, rewatch: true, watchedDate: "19/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The New World", year: 2005, rating: 3.5, rewatch: false, watchedDate: "17/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Fall Guy", year: 2024, rating: 3, rewatch: false, watchedDate: "17/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Ballad of Buster Scruggs", year: 2018, rating: 4, rewatch: true, watchedDate: "16/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Lego Movie", year: 2014, rating: 4, rewatch: false, watchedDate: "15/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Decision to Leave", year: 2022, rating: 5, rewatch: false, watchedDate: "14/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Baby Driver", year: 2017, rating: 4, rewatch: false, watchedDate: "13/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Transformers: Revenge of the Fallen", year: 2009, rating: 1, rewatch: true, watchedDate: "12/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Night Of", year: 2016, rating: 4, rewatch: false, watchedDate: "10/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Sinners", year: 2025, rating: 4, rewatch: false, watchedDate: "7/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Dune", year: 2021, rating: 4.5, rewatch: true, watchedDate: "6/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Vanilla Sky", year: 2001, rating: 4, rewatch: false, watchedDate: "5/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Mission: Impossible – Fallout", year: 2018, rating: 4, rewatch: true, watchedDate: "5/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Lego Batman Movie", year: 2017, rating: 4, rewatch: false, watchedDate: "4/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Terminator 2: Judgment Day", year: 1991, rating: 4, rewatch: false, watchedDate: "4/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Mission: Impossible – Ghost Protocol", year: 2011, rating: 4, rewatch: true, watchedDate: "3/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Mission: Impossible III", year: 2006, rating: 4, rewatch: true, watchedDate: "3/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Mission: Impossible II", year: 2000, rating: 1.5, rewatch: true, watchedDate: "2/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "No Country for Old Men", year: 2007, rating: 5, rewatch: true, watchedDate: "2/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Thunderbolts*", year: 2025, rating: 3.5, rewatch: false, watchedDate: "2/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Lord of the Rings: The War of the Rohirrim", year: 2024, rating: 2, rewatch: false, watchedDate: "1/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Mission: Impossible – Rogue Nation", year: 2015, rating: 4, rewatch: true, watchedDate: "1/7/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Jack the Giant Slayer", year: 2013, rating: 2.5, rewatch: false, watchedDate: "30/6/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "12 Years a Slave", year: 2013, rating: 4.5, rewatch: true, watchedDate: "30/6/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Man of Steel", year: 2013, rating: 3, rewatch: true, watchedDate: "30/6/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Mission: Impossible", year: 1996, rating: 4, rewatch: true, watchedDate: "30/6/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Despicable Me 4", year: 2024, rating: 2, rewatch: true, watchedDate: "29/6/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Avengers: Endgame", year: 2019, rating: 3.5, rewatch: true, watchedDate: "29/6/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "War of the Worlds", year: 2005, rating: 3, rewatch: true, watchedDate: "29/6/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Catch Me If You Can", year: 2002, rating: 4, rewatch: true, watchedDate: "28/6/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Dune: Part Two", year: 2024, rating: 5, rewatch: true, watchedDate: "28/6/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Nosferatu", year: 2024, rating: 4, rewatch: false, watchedDate: "28/6/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Madu Tiga", year: 1964, rating: 3, rewatch: false, watchedDate: "25/6/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Revolutionary Road", year: 2008, rating: 4, rewatch: false, watchedDate: "6/6/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Hateful Eight", year: 2015, rating: 4, rewatch: false, watchedDate: "5/6/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Mickey 17", year: 2025, rating: 3.5, rewatch: false, watchedDate: "5/6/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "American Beauty", year: 1999, rating: 5, rewatch: false, watchedDate: "5/6/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "A Beautiful Mind", year: 2001, rating: 4, rewatch: true, watchedDate: "4/6/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Speak No Evil", year: 2024, rating: 2, rewatch: false, watchedDate: "4/6/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Curious Case of Benjamin Button", year: 2008, rating: 3.5, rewatch: true, watchedDate: "3/6/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Reversi", year: 2024, rating: 1.5, rewatch: false, watchedDate: "31/5/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Mission: Impossible – The Final Reckoning", year: 2025, rating: 4, rewatch: false, watchedDate: "24/5/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Dune: Part Two", year: 2024, rating: 5, rewatch: true, watchedDate: "24/5/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Interstellar", year: 2014, rating: 5, rewatch: true, watchedDate: "23/5/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Babah", year: 2024, rating: 2, rewatch: false, watchedDate: "11/5/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Get Out", year: 2017, rating: 3.5, rewatch: false, watchedDate: "9/5/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Transformers", year: 2007, rating: 3, rewatch: true, watchedDate: "3/5/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Transformers: Dark of the Moon", year: 2011, rating: 3.5, rewatch: true, watchedDate: "3/5/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Talentime", year: 2009, rating: 4.5, rewatch: false, watchedDate: "3/5/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Speed", year: 1994, rating: 3.5, rewatch: false, watchedDate: "2/5/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Mukhsin", year: 2006, rating: 5, rewatch: false, watchedDate: "26/4/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Stranger Than Fiction", year: 2006, rating: 3, rewatch: false, watchedDate: "25/4/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Howl's Moving Castle", year: 2004, rating: 4, rewatch: true, watchedDate: "25/4/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Lincoln", year: 2012, rating: 4, rewatch: false, watchedDate: "24/4/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Peanuts Movie", year: 2015, rating: 4, rewatch: true, watchedDate: "21/4/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Master", year: 2012, rating: 5, rewatch: false, watchedDate: "18/4/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Punch-Drunk Love", year: 2002, rating: 4.5, rewatch: false, watchedDate: "17/4/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Mission: Impossible – Fallout", year: 2018, rating: 4, rewatch: true, watchedDate: "5/4/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Catch Me If You Can", year: 2002, rating: 4, rewatch: true, watchedDate: "4/4/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Holland", year: 2025, rating: 2, rewatch: false, watchedDate: "4/4/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Dune: Part Two", year: 2024, rating: 5, rewatch: true, watchedDate: "23/3/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Dune", year: 2021, rating: 4.5, rewatch: true, watchedDate: "22/3/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Batman", year: 2022, rating: 4.5, rewatch: true, watchedDate: "18/3/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Captain America: The Winter Soldier", year: 2014, rating: 4, rewatch: true, watchedDate: "16/3/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Star Wars", year: 1977, rating: 4.5, rewatch: true, watchedDate: "15/3/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Autumn Sonata", year: 1978, rating: 5, rewatch: false, watchedDate: "11/3/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "A Different Man", year: 2024, rating: 5, rewatch: false, watchedDate: "9/3/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Flow", year: 2024, rating: 3.5, rewatch: false, watchedDate: "8/3/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Captain America: Brave New World", year: 2025, rating: 2, rewatch: false, watchedDate: "8/3/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "La La Land", year: 2016, rating: 5, rewatch: false, watchedDate: "7/3/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Brutalist", year: 2024, rating: 3.5, rewatch: false, watchedDate: "6/3/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Spirited Away", year: 2001, rating: 5, rewatch: true, watchedDate: "2/3/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Abang Adik", year: 2023, rating: 2.5, rewatch: false, watchedDate: "27/2/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Mad Max: Fury Road", year: 2015, rating: 5, rewatch: false, watchedDate: "26/2/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Civil War", year: 2024, rating: 3.5, rewatch: false, watchedDate: "25/2/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Raid 2", year: 2014, rating: 3.5, rewatch: false, watchedDate: "24/2/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Don't F**k with Cats: Hunting an Internet Killer", year: 2019, rating: 3.5, rewatch: false, watchedDate: "23/2/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Wizard of Lies", year: 2017, rating: 3.5, rewatch: false, watchedDate: "23/2/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Don't F**k with Cats: Hunting an Internet Killer", year: 2019, rating: 1, rewatch: true, watchedDate: "23/2/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Little Things", year: 2021, rating: 2, rewatch: true, watchedDate: "16/2/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Dune: Part Two", year: 2024, rating: 5, rewatch: true, watchedDate: "15/2/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Brightburn", year: 2019, rating: 1, rewatch: false, watchedDate: "14/2/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Dune", year: 2021, rating: 4.5, rewatch: true, watchedDate: "12/2/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Blade Runner 2049", year: 2017, rating: 4.5, rewatch: true, watchedDate: "12/2/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Dune: Part Two", year: 2024, rating: 5, rewatch: false, watchedDate: "10/2/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Girl on the Train", year: 2016, rating: 1, rewatch: false, watchedDate: "9/2/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Anuja", year: 2024, rating: 3.5, rewatch: false, watchedDate: "8/2/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Closing Dynasty", year: 2022, rating: 3, rewatch: false, watchedDate: "8/2/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Harry Potter and the Deathly Hallows: Part 2", year: 2011, rating: 4, rewatch: true, watchedDate: "29/1/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Catch Me If You Can", year: 2002, rating: 4, rewatch: true, watchedDate: "29/1/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Harry Potter and the Order of the Phoenix", year: 2007, rating: 4, rewatch: true, watchedDate: "29/1/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Harry Potter and the Half-Blood Prince", year: 2009, rating: 4.5, rewatch: true, watchedDate: "28/1/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Harry Potter and the Deathly Hallows: Part 1", year: 2010, rating: 4, rewatch: true, watchedDate: "28/1/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "In the Mood for Love", year: 2000, rating: 5, rewatch: false, watchedDate: "18/1/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Survival Family", year: 2016, rating: 4, rewatch: true, watchedDate: "3/1/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Raging Bull", year: 1980, rating: 5, rewatch: false, watchedDate: "3/1/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Seventh Seal", year: 1957, rating: 5, rewatch: false, watchedDate: "3/1/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Wild Robot", year: 2024, rating: 4, rewatch: false, watchedDate: "1/1/2025", poster: "https://via.placeholder.com/300x450" },
+  { title: "Watchmen", year: 2009, rating: 3.5, rewatch: false, watchedDate: "29/12/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Hellboy", year: 2004, rating: 3, rewatch: true, watchedDate: "29/12/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Lord of the Rings: The Fellowship of the Ring", year: 2001, rating: 5, rewatch: true, watchedDate: "29/12/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Juror #2", year: 2024, rating: 3, rewatch: false, watchedDate: "21/12/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Transformers One", year: 2024, rating: 3.5, rewatch: false, watchedDate: "21/12/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Children of Men", year: 2006, rating: 5, rewatch: false, watchedDate: "19/12/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Contagion", year: 2011, rating: 4.5, rewatch: true, watchedDate: "15/12/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Hereditary", year: 2018, rating: 4.5, rewatch: false, watchedDate: "14/12/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Barry Lyndon", year: 1975, rating: 5, rewatch: false, watchedDate: "8/12/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Full Metal Jacket", year: 1987, rating: 4, rewatch: false, watchedDate: "6/12/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Lawrence of Arabia", year: 1962, rating: 3.5, rewatch: false, watchedDate: "6/12/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Wait", year: 2020, rating: 2, rewatch: false, watchedDate: "3/12/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Her", year: 2013, rating: 3.5, rewatch: false, watchedDate: "29/11/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Ipar Adalah Maut", year: 2024, rating: 1, rewatch: false, watchedDate: "28/11/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Reader", year: 2008, rating: 3, rewatch: false, watchedDate: "28/11/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Miss Peregrine's Home for Peculiar Children", year: 2016, rating: 3.5, rewatch: false, watchedDate: "28/11/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Godfather Part III", year: 1990, rating: 3, rewatch: false, watchedDate: "27/11/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Godzilla × Kong: The New Empire", year: 2024, rating: 2, rewatch: false, watchedDate: "27/11/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Transformers: Rise of the Beasts", year: 2023, rating: 1.5, rewatch: false, watchedDate: "26/11/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Schindler's List", year: 1993, rating: 4.5, rewatch: true, watchedDate: "26/11/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "There Will Be Blood", year: 2007, rating: 5, rewatch: true, watchedDate: "24/11/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Magnolia", year: 1999, rating: 5, rewatch: false, watchedDate: "24/11/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Hachi: A Dog's Tale", year: 2009, rating: 3.5, rewatch: false, watchedDate: "16/11/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Citizen Kane", year: 1941, rating: 4, rewatch: false, watchedDate: "15/11/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Northman", year: 2022, rating: 4, rewatch: false, watchedDate: "10/11/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Trap", year: 2024, rating: 3, rewatch: false, watchedDate: "8/11/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Grave Torture", year: 2024, rating: 2, rewatch: false, watchedDate: "26/10/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "There Will Be Blood", year: 2007, rating: 5, rewatch: false, watchedDate: "25/10/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Witch", year: 2015, rating: 5, rewatch: false, watchedDate: "19/10/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Lighthouse", year: 2019, rating: 4, rewatch: false, watchedDate: "12/10/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Fargo", year: 1996, rating: 4, rewatch: false, watchedDate: "12/10/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Enemy", year: 2013, rating: 4, rewatch: false, watchedDate: "11/10/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Arrival", year: 2016, rating: 4.5, rewatch: false, watchedDate: "10/10/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Sicario", year: 2015, rating: 4, rewatch: false, watchedDate: "10/10/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Incendies", year: 2010, rating: 4.5, rewatch: false, watchedDate: "6/10/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Imaginur", year: 2022, rating: 3, rewatch: true, watchedDate: "23/9/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Grave of the Fireflies", year: 1988, rating: 5, rewatch: false, watchedDate: "21/9/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Watchers", year: 2024, rating: 1, rewatch: false, watchedDate: "19/9/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "All Quiet on the Western Front", year: 2022, rating: 4, rewatch: false, watchedDate: "18/9/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "How to Make Millions Before Grandma Dies", year: 2024, rating: 5, rewatch: false, watchedDate: "18/9/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Sound of Metal", year: 2019, rating: 4.5, rewatch: false, watchedDate: "12/9/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Blade Runner", year: 1982, rating: 4.5, rewatch: false, watchedDate: "12/9/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Imaginur", year: 2022, rating: 3, rewatch: false, watchedDate: "12/9/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Mank", year: 2020, rating: 3, rewatch: false, watchedDate: "10/8/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Lord of the Rings: The Two Towers", year: 2002, rating: 5, rewatch: true, watchedDate: "26/7/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Once Upon a Time... in Hollywood", year: 2019, rating: 4.5, rewatch: true, watchedDate: "25/7/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Ballad of Buster Scruggs", year: 2018, rating: 4, rewatch: false, watchedDate: "24/7/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Empire Strikes Back", year: 1980, rating: 5, rewatch: true, watchedDate: "20/7/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Insomnia", year: 2002, rating: 4, rewatch: true, watchedDate: "14/7/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Big Short", year: 2015, rating: 4.5, rewatch: true, watchedDate: "14/7/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Truman Show", year: 1998, rating: 4, rewatch: true, watchedDate: "25/6/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Lord of the Rings: The Return of the King", year: 2003, rating: 5, rewatch: true, watchedDate: "15/6/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Lord of the Rings: The Fellowship of the Ring", year: 2001, rating: 5, rewatch: true, watchedDate: "14/6/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Star Wars", year: 1977, rating: 4.5, rewatch: true, watchedDate: "13/6/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Lord of the Rings: The Fellowship of the Ring", year: 2001, rating: 5, rewatch: true, watchedDate: "7/6/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "12 Angry Men", year: 1957, rating: 4.5, rewatch: false, watchedDate: "6/6/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Godzilla Minus One", year: 2023, rating: 4, rewatch: false, watchedDate: "6/6/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "War for the Planet of the Apes", year: 2017, rating: 4.5, rewatch: true, watchedDate: "1/6/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Dawn of the Planet of the Apes", year: 2014, rating: 4.5, rewatch: true, watchedDate: "28/5/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "L.A. Confidential", year: 1997, rating: 5, rewatch: true, watchedDate: "24/5/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Sheriff", year: 2024, rating: 2.5, rewatch: false, watchedDate: "20/5/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Once Upon a Time... in Hollywood", year: 2019, rating: 4, rewatch: true, watchedDate: "20/5/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Rise of the Planet of the Apes", year: 2011, rating: 4, rewatch: true, watchedDate: "20/5/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Kingdom of the Planet of the Apes", year: 2024, rating: 3.5, rewatch: false, watchedDate: "19/5/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Monkey Man", year: 2024, rating: 3.5, rewatch: false, watchedDate: "28/4/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Ripley", year: 2024, rating: 5, rewatch: false, watchedDate: "28/4/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "1917", year: 2019, rating: 4.5, rewatch: false, watchedDate: "21/4/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Killer", year: 2023, rating: 3.5, rewatch: false, watchedDate: "17/3/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Inglourious Basterds", year: 2009, rating: 5, rewatch: false, watchedDate: "14/2/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Mission: Impossible III", year: 2006, rating: 4, rewatch: false, watchedDate: "3/2/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Silence", year: 2016, rating: 5, rewatch: false, watchedDate: "2/2/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Mission: Impossible – Dead Reckoning", year: 2023, rating: 4, rewatch: false, watchedDate: "25/1/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Spider-Man: Across the Spider-Verse", year: 2023, rating: 4, rewatch: false, watchedDate: "12/1/2024", poster: "https://via.placeholder.com/300x450" },
+  { title: "Fantastic Mr. Fox", year: 2009, rating: 5, rewatch: false, watchedDate: "27/12/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Lord of the Rings: The Two Towers", year: 2002, rating: 5, rewatch: true, watchedDate: "15/12/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "nothing, except everything.", year: 2023, rating: 1, rewatch: false, watchedDate: "2/12/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "Killers of the Flower Moon", year: 2023, rating: 5, rewatch: false, watchedDate: "4/11/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "Brave", year: 2012, rating: 4.5, rewatch: true, watchedDate: "19/10/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Grand Budapest Hotel", year: 2014, rating: 4, rewatch: false, watchedDate: "13/9/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "Guardians of the Galaxy Vol. 3", year: 2023, rating: 4, rewatch: false, watchedDate: "8/9/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "Fury", year: 2014, rating: 4.5, rewatch: false, watchedDate: "1/9/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "No Country for Old Men", year: 2007, rating: 5, rewatch: false, watchedDate: "25/8/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "Mission: Impossible – Fallout", year: 2018, rating: 4, rewatch: false, watchedDate: "17/8/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "Pulp Fiction", year: 1994, rating: 5, rewatch: false, watchedDate: "16/8/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "2001: A Space Odyssey", year: 1968, rating: 5, rewatch: false, watchedDate: "5/8/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "Logan", year: 2017, rating: 4.5, rewatch: true, watchedDate: "30/7/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "Oppenheimer", year: 2023, rating: 4, rewatch: false, watchedDate: "22/7/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "Forrest Gump", year: 1994, rating: 5, rewatch: true, watchedDate: "13/7/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "Inception", year: 2010, rating: 5, rewatch: true, watchedDate: "12/7/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Godfather Part II", year: 1974, rating: 5, rewatch: false, watchedDate: "9/7/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Midnight Sky", year: 2020, rating: 2, rewatch: false, watchedDate: "8/7/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Godfather", year: 1972, rating: 5, rewatch: false, watchedDate: "8/7/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "Cinema Paradiso", year: 1988, rating: 4, rewatch: false, watchedDate: "24/6/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "Gone Girl", year: 2014, rating: 4.5, rewatch: false, watchedDate: "23/6/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Shining", year: 1980, rating: 4, rewatch: false, watchedDate: "25/5/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "Taxi Driver", year: 1976, rating: 4, rewatch: false, watchedDate: "25/5/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Prestige", year: 2006, rating: 5, rewatch: false, watchedDate: "20/5/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "Shutter Island", year: 2010, rating: 5, rewatch: true, watchedDate: "19/5/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "L.A. Confidential", year: 1997, rating: 5, rewatch: true, watchedDate: "15/5/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "Primal Fear", year: 1996, rating: 4, rewatch: false, watchedDate: "22/4/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Lord of the Rings: The Fellowship of the Ring", year: 2001, rating: 5, rewatch: true, watchedDate: "15/4/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Lord of the Rings: The Return of the King", year: 2003, rating: 5, rewatch: true, watchedDate: "15/4/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "White Noise", year: 2022, rating: 3.5, rewatch: false, watchedDate: "18/2/2023", poster: "https://via.placeholder.com/300x450" },
+  { title: "Avatar", year: 2009, rating: 2, rewatch: false, watchedDate: "15/12/2022", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Irishman", year: 2019, rating: 5, rewatch: false, watchedDate: "3/12/2022", poster: "https://via.placeholder.com/300x450" },
+  { title: "Dune", year: 2021, rating: 3.5, rewatch: false, watchedDate: "28/10/2022", poster: "https://via.placeholder.com/300x450" },
+  { title: "Jigsaw", year: 2017, rating: 0.5, rewatch: false, watchedDate: "21/10/2022", poster: "https://via.placeholder.com/300x450" },
+  { title: "Se7en", year: 1995, rating: 5, rewatch: false, watchedDate: "20/10/2022", poster: "https://via.placeholder.com/300x450" },
+  { title: "L.A. Confidential", year: 1997, rating: 5, rewatch: false, watchedDate: "15/10/2022", poster: "https://via.placeholder.com/300x450" },
+  { title: "Prisoners", year: 2013, rating: 5, rewatch: false, watchedDate: "13/10/2022", poster: "https://via.placeholder.com/300x450" },
+  { title: "Zodiac", year: 2007, rating: 5, rewatch: true, watchedDate: "16/9/2022", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Devil All the Time", year: 2020, rating: 4, rewatch: false, watchedDate: "10/9/2022", poster: "https://via.placeholder.com/300x450" },
+  { title: "Tenet", year: 2020, rating: 4, rewatch: true, watchedDate: "10/9/2022", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Imitation Game", year: 2014, rating: 4, rewatch: false, watchedDate: "9/7/2022", poster: "https://via.placeholder.com/300x450" },
+  { title: "GoodFellas", year: 1990, rating: 4.5, rewatch: false, watchedDate: "23/4/2022", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Batman", year: 2022, rating: 4.5, rewatch: false, watchedDate: "25/3/2022", poster: "https://via.placeholder.com/300x450" },
+  { title: "Crossroads: One Two Jaga", year: 2018, rating: 3.5, rewatch: false, watchedDate: "12/3/2022", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Lord of the Rings: The Return of the King", year: 2003, rating: 5, rewatch: true, watchedDate: "13/2/2022", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Lord of the Rings: The Fellowship of the Ring", year: 2001, rating: 5, rewatch: true, watchedDate: "12/2/2022", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Lord of the Rings: The Two Towers", year: 2002, rating: 5, rewatch: true, watchedDate: "12/2/2022", poster: "https://via.placeholder.com/300x450" },
+  { title: "Blade Runner 2049", year: 2017, rating: 4, rewatch: true, watchedDate: "5/1/2022", poster: "https://via.placeholder.com/300x450" },
+  { title: "Once Upon a Time... in Hollywood", year: 2019, rating: 4.5, rewatch: false, watchedDate: "19/12/2021", poster: "https://via.placeholder.com/300x450" },
+  { title: "Skyfall", year: 2012, rating: 4.5, rewatch: false, watchedDate: "16/12/2021", poster: "https://via.placeholder.com/300x450" },
+  { title: "No Time to Die", year: 2021, rating: 3, rewatch: false, watchedDate: "7/12/2021", poster: "https://via.placeholder.com/300x450" },
+  { title: "Gravity", year: 2013, rating: 3, rewatch: true, watchedDate: "6/12/2021", poster: "https://via.placeholder.com/300x450" },
+  { title: "tick, tick... BOOM!", year: 2021, rating: 4, rewatch: false, watchedDate: "27/11/2021", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Lord of the Rings: The Fellowship of the Ring", year: 2001, rating: 5, rewatch: true, watchedDate: "28/6/2021", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Lord of the Rings: The Two Towers", year: 2002, rating: 5, rewatch: true, watchedDate: "28/6/2021", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Lord of the Rings: The Return of the King", year: 2003, rating: 5, rewatch: true, watchedDate: "28/6/2021", poster: "https://via.placeholder.com/300x450" },
+  { title: "Dunkirk", year: 2017, rating: 4.5, rewatch: false, watchedDate: "28/6/2021", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Dark Knight", year: 2008, rating: 4.5, rewatch: true, watchedDate: "19/5/2021", poster: "https://via.placeholder.com/300x450" },
+  { title: "Tenet", year: 2020, rating: 4, rewatch: false, watchedDate: "17/4/2021", poster: "https://via.placeholder.com/300x450" },
+  { title: "Jaws", year: 1975, rating: 4.5, rewatch: true, watchedDate: "16/4/2021", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Assassination of Jesse James by the Coward Robert Ford", year: 2007, rating: 5, rewatch: false, watchedDate: "27/3/2021", poster: "https://via.placeholder.com/300x450" },
+  { title: "Interstellar", year: 2014, rating: 5, rewatch: true, watchedDate: "20/3/2021", poster: "https://via.placeholder.com/300x450" },
+  { title: "Knives Out", year: 2019, rating: 4, rewatch: false, watchedDate: "18/3/2021", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Green Mile", year: 1999, rating: 5, rewatch: false, watchedDate: "2/1/2021", poster: "https://via.placeholder.com/300x450" },
+  { title: "Parasite", year: 2019, rating: 5, rewatch: false, watchedDate: "24/7/2020", poster: "https://via.placeholder.com/300x450" },
+  { title: "Malek", year: 2018, rating: 3.5, rewatch: false, watchedDate: "13/6/2020", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Shawshank Redemption", year: 1994, rating: 4, rewatch: false, watchedDate: "6/6/2020", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Lord of the Rings: The Return of the King", year: 2003, rating: 5, rewatch: true, watchedDate: "3/5/2020", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Lord of the Rings: The Fellowship of the Ring", year: 2001, rating: 5, rewatch: true, watchedDate: "16/4/2020", poster: "https://via.placeholder.com/300x450" },
+  { title: "Ford v Ferrari", year: 2019, rating: 4, rewatch: false, watchedDate: "28/12/2019", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Lord of the Rings: The Two Towers", year: 2002, rating: 5, rewatch: true, watchedDate: "23/12/2019", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Lord of the Rings: The Fellowship of the Ring", year: 2001, rating: 5, rewatch: true, watchedDate: "21/12/2019", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Lord of the Rings: The Return of the King", year: 2003, rating: 5, rewatch: true, watchedDate: "21/12/2019", poster: "https://via.placeholder.com/300x450" },
+  { title: "Star Wars: The Rise of Skywalker", year: 2019, rating: 0.5, rewatch: false, watchedDate: "20/12/2019", poster: "https://via.placeholder.com/300x450" },
+  { title: "Iron Man", year: 2008, rating: 4, rewatch: true, watchedDate: "24/5/2019", poster: "https://via.placeholder.com/300x450" },
+  { title: "Avengers: Endgame", year: 2019, rating: 3.5, rewatch: false, watchedDate: "10/5/2019", poster: "https://via.placeholder.com/300x450" },
+  { title: "The Amazing Spider-Man 2", year: 2014, rating: 3.5, rewatch: true, watchedDate: "24/11/2018", poster: "https://via.placeholder.com/300x450" },
+  { title: "Captain America: The Winter Soldier", year: 2014, rating: 4, rewatch: false, watchedDate: "26/10/2018", poster: "https://via.placeholder.com/300x450" },
+  { title: "Transformers: Revenge of the Fallen", year: 2009, rating: 1, rewatch: true, watchedDate: "25/5/2018", poster: "https://via.placeholder.com/300x450" },
+  { title: "Avengers: Infinity War", year: 2018, rating: 4, rewatch: false, watchedDate: "28/4/2018", poster: "https://via.placeholder.com/300x450" },
+  { title: "Captain America: Civil War", year: 2016, rating: 4, rewatch: false, watchedDate: "15/12/2017", poster: "https://via.placeholder.com/300x450" },
+  { title: "Rogue One: A Star Wars Story", year: 2016, rating: 4, rewatch: false, watchedDate: "24/12/2016", poster: "https://via.placeholder.com/300x450" },
+  { title: "Star Wars: The Force Awakens", year: 2015, rating: 3, rewatch: false, watchedDate: "25/12/2015", poster: "https://via.placeholder.com/300x450" },
+  { title: "Nova", year: 2014, rating: 3.5, rewatch: false, watchedDate: "26/9/2015", poster: "https://via.placeholder.com/300x450" }
+];
 
-<div class="flex justify-center">
-<img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Technology" class="rounded-2xl shadow-xl w-full max-w-md float" />
-</div>
-</div>
-</section>
+// ===== Pagination =====
+const perPage = 10;
+let currentPage = 1;
 
-<!-- ABOUT SECTION -->
-<section class="bg-gray-900 py-20">
-<div class="max-w-5xl mx-auto p-10 slide-up">
-<h2 class="text-3xl font-semibold mb-6">About Me</h2>
-<p class="text-gray-300 leading-relaxed">
-My academic background involves systems analysis, low-level programming,
-and research writing. I enjoy exploring how technology intersects with
-society — from intelligent systems to digital media and cinema.
-</p>
-</div>
-</section>
+function renderReviews() {
+  const container = document.getElementById('reviewsContainer');
+  container.innerHTML = '';
+  const start = (currentPage - 1) * perPage;
+  const pageMovies = movies.slice(start, start + perPage);
 
-<!-- FEATURE CARDS -->
-<section class="py-20">
-<div class="max-w-6xl mx-auto p-10 grid md:grid-cols-3 gap-6">
-<div class="bg-gray-800 p-6 rounded-2xl slide-up">
-<h3 class="font-semibold text-lg mb-2">Systems & Research</h3>
-<p class="text-gray-400 text-sm">
-Academic projects involving system design, modeling, and analysis.
-</p>
-</div>
-</div>
-</section>
+  pageMovies.forEach(m => {
+    const card = document.createElement('div');
+    card.className = 'bg-gray-800 p-5 rounded-xl flex gap-4 relative cursor-pointer hover:bg-gray-700 transition';
+    card.innerHTML = `
+      <div class="relative">
+        <img src="${m.poster}" alt="${m.title}" class="w-24 h-36 object-cover rounded" />
+        ${m.rewatch ? '<span class="absolute top-2 left-2 bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded">Rewatch</span>' : ''}
+      </div>
+      <div>
+        <h3 class="font-semibold text-lg">${m.title} (${m.year})</h3>
+        <div class="flex items-center gap-0.5 rating-stars">${renderStars(m.rating)}</div>
+        <p class="text-gray-400 text-sm">Watched: ${m.watchedDate}</p>
+      </div>
+    `;
+    // Add click to open review modal
+    card.addEventListener('click', () => {
+      openModal(m.title, m.review);
+    });
 
+    container.appendChild(card);
+  });
+
+  document.getElementById('pageInfo').innerText =
+    `Page ${currentPage} of ${Math.ceil(movies.length / perPage)}`;
+  document.getElementById('pageInput').value = currentPage;
+}
+
+function nextPage() { if (currentPage < Math.ceil(movies.length / perPage)) { currentPage++; renderReviews(); } }
+function prevPage() { if (currentPage > 1) { currentPage--; renderReviews(); } }
+function jumpToPage() {
+  const input = parseInt(document.getElementById('pageInput').value);
+  if (input && input >= 1 && input <= Math.ceil(movies.length / perPage)) {
+    currentPage = input;
+    renderReviews();
+  }
+}
+
+function renderStars(rating) {
+  const fullStars = Math.floor(rating);
+  const hasHalf = rating % 1 >= 0.5;
+  const emptyStars = 5 - fullStars - (hasHalf ? 1 : 0);
+
+  let starsHTML = '';
+
+  // Full stars
+  for (let i = 0; i < fullStars; i++) {
+    starsHTML += fullStarSVG();
+  }
+
+  // Half star
+  if (hasHalf) {
+    starsHTML += halfStarSVG();
+  }
+
+  // Empty stars
+  for (let i = 0; i < emptyStars; i++) {
+    starsHTML += emptyStarSVG();
+  }
+
+  return starsHTML;
+}
+
+function fullStarSVG() {
+  return `
+    <svg class="star" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M12 17.27L18.18 21l-1.64-7.03
+           L22 9.24l-7.19-.61L12 2
+           9.19 8.63 2 9.24l5.46 4.73
+           L5.82 21z"/>
+    </svg>
+  `;
+}
+
+function halfStarSVG() {
+  return `
+    <svg class="star" viewBox="0 0 24 24">
+      <defs>
+        <linearGradient id="halfGrad">
+          <stop offset="50%" stop-color="currentColor"/>
+          <stop offset="50%" stop-color="#374151"/>
+        </linearGradient>
+      </defs>
+      <path fill="url(#halfGrad)"
+        d="M12 17.27L18.18 21l-1.64-7.03
+           L22 9.24l-7.19-.61L12 2
+           9.19 8.63 2 9.24l5.46 4.73
+           L5.82 21z"/>
+    </svg>
+  `;
+}
+
+function emptyStarSVG() {
+  return `
+    <svg class="star" viewBox="0 0 24 24">
+      <path fill="#374151"
+        d="M12 17.27L18.18 21l-1.64-7.03
+           L22 9.24l-7.19-.61L12 2
+           9.19 8.63 2 9.24l5.46 4.73
+           L5.82 21z"/>
+    </svg>
+  `;
+}
+
+
+
+// ===== Tabs =====
+function switchTab(id, btn) {
+  document.querySelectorAll('.tab-section')
+    .forEach(s => s.classList.add('hidden'));
+
+  document.querySelectorAll('.tab-btn')
+    .forEach(b => b.classList.remove('active-tab'));
+
+  document.getElementById(id).classList.remove('hidden');
+  btn.classList.add('active-tab');
+}
+
+
+// ===== Modal =====
+function openModal(title, content) {
+  document.getElementById('modalTitle').innerText = title;
+  document.getElementById('modalContent').innerHTML = `<p>${content}</p>`;
+  document.getElementById('modal').classList.remove('hidden');
+}
+function closeModal() { document.getElementById('modal').classList.add('hidden'); }
+
+// ===== Initial Render =====
+renderReviews();
+</script>
 <footer class="text-center py-6 flex flex-col items-center gap-3 bg-gray-950">
   <div class="flex gap-4">
     <!-- Instagram -->
@@ -247,5 +787,7 @@ Academic projects involving system design, modeling, and analysis.
   </div>
   <p class="text-gray-400 text-xs mt-2">© 2026 Amir Fauzi</p>
 </footer>
+
+
 </body>
 </html>
