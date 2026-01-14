@@ -407,7 +407,7 @@ const movies = [
   { title: "The Exorcist", year: 1973, rating: 4, rewatch: false, watchedDate: "4/8/2025", poster: "https://media.themoviedb.org/t/p/w220_and_h330_face/m8sSNeLwoDk881F8AqhCz9VzYro.jpg" },
   { title: "Zodiac", year: 2007, rating: 5, rewatch: true, watchedDate: "3/8/2025", poster: "https://cdn.posteritati.com/posters/000/000/063/204/zodiac-md-web.jpg" },
   { title: "Late Night with the Devil", year: 2023, rating: 3, rewatch: false, watchedDate: "2/8/2025", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP_WpuDlSTtQozWikhZwRY8bhL30HRApuPWw&s" },
-  { title: "Hope", year: 2013, rating: 5, rewatch: false, watchedDate: "31/7/2025", poster: "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p10350520_v_v8_ac.jpg },
+  { title: "Hope", year: 2013, rating: 5, rewatch: false, watchedDate: "31/7/2025", poster: "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p10350520_v_v8_ac.jpg" },
   { title: "The Nightmare Before Christmas", year: 1993, rating: 4, rewatch: false, watchedDate: "30/7/2025", poster: "https://cdn.europosters.eu/image/1300/poster/the-nightmare-before-christmas-i4445.jpg" },
   { title: "Y Tu Mamá También", year: 2001, rating: 4.5, rewatch: false, watchedDate: "29/7/2025", poster: "https://media.posterlounge.com/img/products/620000/612628/612628_poster.jpg" },
   { title: "Kahar: Kapla High Council", year: 2024, rating: 2, rewatch: false, watchedDate: "28/7/2025", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTulzpCfzomk7wmBpyJvB1feJD_I58XwFHydg&s" },
@@ -697,12 +697,19 @@ function renderReviews() {
   pageMovies.forEach(m => {
     const card = document.createElement('div');
     card.className = 'bg-gray-800 p-5 rounded-xl flex flex-nowrap gap-4 relative cursor-pointer hover:bg-gray-700 transition';
-    card.innerHTML = `
      card.innerHTML = `
   <div class="relative flex-shrink-0">
     <img src="${m.poster}"
          alt="${m.title}"
          class="w-24 h-36 object-cover rounded" />
+
+    ${m.rewatch ? `
+      <span class="absolute top-2 left-2 bg-blue-500/90
+                   text-white text-[10px] font-semibold
+                   px-2 py-0.5 rounded-full backdrop-blur">
+        REWATCH
+      </span>
+    ` : ''}
   </div>
 
   <div class="flex-1 min-w-0">
@@ -711,15 +718,16 @@ function renderReviews() {
       ${m.title} (${m.year})
     </h3>
 
-    <div class="flex items-center gap-0.5 rating-stars">
+    <div class="flex items-center gap-0.5 rating-stars mt-1">
       ${renderStars(m.rating)}
     </div>
 
-    <p class="text-gray-400 text-sm">
+    <p class="text-gray-400 text-sm mt-1">
       Watched: ${m.watchedDate}
     </p>
   </div>
 `;
+
     // Add click to open review modal
     card.addEventListener('click', () => {
       openModal(m.title, m.review);
@@ -877,7 +885,6 @@ renderReviews();
 
 </body>
 </html>
-
 
 
 
