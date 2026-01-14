@@ -6,7 +6,6 @@
 <title>Movies</title>
 <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- Add this in your <head> to import the font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body class="bg-gray-950 text-gray-100 min-h-screen">
@@ -699,26 +698,28 @@ function renderReviews() {
     const card = document.createElement('div');
     card.className = 'bg-gray-800 p-5 rounded-xl flex flex-nowrap gap-4 relative cursor-pointer hover:bg-gray-700 transition';
     card.innerHTML = `
-     <div class="relative flex-shrink-0">
-  <img src="${m.poster}"
-       alt="${m.title}"
-       class="w-24 h-36 object-cover rounded" />
-</div>
-
-<div class="flex-1 min-w-0">
-  <h3 class="font-semibold text-lg leading-snug line-clamp-2">
-    ${m.title} (${m.year})
-  </h3>
-
-  <div class="flex items-center gap-0.5 rating-stars">
-    ${renderStars(m.rating)}
+     card.innerHTML = `
+  <div class="relative flex-shrink-0">
+    <img src="${m.poster}"
+         alt="${m.title}"
+         class="w-24 h-36 object-cover rounded" />
   </div>
 
-  <p class="text-gray-400 text-sm">
-    Watched: ${m.watchedDate}
-  </p>
-</div>
-    `;
+  <div class="flex-1 min-w-0">
+    <h3 class="font-semibold text-lg leading-snug"
+        style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">
+      ${m.title} (${m.year})
+    </h3>
+
+    <div class="flex items-center gap-0.5 rating-stars">
+      ${renderStars(m.rating)}
+    </div>
+
+    <p class="text-gray-400 text-sm">
+      Watched: ${m.watchedDate}
+    </p>
+  </div>
+`;
     // Add click to open review modal
     card.addEventListener('click', () => {
       openModal(m.title, m.review);
@@ -876,6 +877,7 @@ renderReviews();
 
 </body>
 </html>
+
 
 
 
