@@ -700,9 +700,16 @@ function renderReviews() {
     card.className = 'bg-gray-800 p-5 rounded-xl flex gap-4 relative cursor-pointer hover:bg-gray-700 transition';
     card.innerHTML = `
       <div class="relative flex-shrink-0">
+ <div class="relative flex-shrink-0">
   <img src="${m.poster}"
        alt="${m.title}"
        class="w-24 h-36 object-cover rounded" />
+
+  ${m.rewatch ? `
+    <span class="absolute top-2 left-2 bg-blue-500 text-white text-[10px] font-semibold px-2 py-1 rounded shadow">
+      Rewatch
+    </span>
+  ` : ''}
 </div>
 
 <div class="flex-1 min-w-0">
@@ -877,5 +884,6 @@ renderReviews();
 
 </body>
 </html>
+
 
 
